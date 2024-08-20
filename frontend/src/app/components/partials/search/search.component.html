@@ -1,0 +1,8 @@
+<div>
+<input type="text" #s
+ placeholder="What do you want to eat?"
+ (keyup.enter)="search(s.value)"
+ 
+>
+<button (click)="search(s.value)" >Search</button>
+</div>

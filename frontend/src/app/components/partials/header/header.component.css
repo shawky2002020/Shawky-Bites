@@ -1,0 +1,65 @@
+header{
+  position: relative;
+  background: white;
+  padding: 0;
+  border-bottom: 1px solid red;
+}
+
+a{
+  color: brown;
+}
+
+.container{
+  display: flex;
+  margin: 0 , auto;
+  justify-content: space-between;
+  font-size: 20px;
+} 
+
+a.logo{
+   font-weight: bold;
+   padding: 1rem;
+   align-self: center;
+}
+
+ul{
+  display: flex;
+  list-style-type: none;
+  
+}
+ul a{
+  padding: 1rem;
+  display: inline-block;
+}
+
+a span{
+  background: brown;
+  color: white;
+  padding: 0.1rem 0.45rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+}
+.menu-container{
+  position: relative;
+}
+
+.menu{
+  position: absolute;
+  z-index: 1;
+  background: whitesmoke;
+  display: none;
+}
+.menu-container:hover .menu{
+  display: block;
+}
+.menu a{
+  min-width: 9rem;
+  width: 100%;
+}
+
+
+
+
+
+
+

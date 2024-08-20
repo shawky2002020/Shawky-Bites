@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Quicksand:wght@300..700&display=swap');
+ul{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+  list-style: none;
+  padding: 0;
+}
+.name{
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+li a{
+  position: relative;
+  height: 22.5rem;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: brown;
+}
+li a img{
+  object-fit: cover;
+  height:14.5rem ;
+}
+.content{
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.2rem;
+  position: relative;
+  height: 7rem;
+}
+.favorite{
+  position: absolute;
+  right: 0.5rem;
+  top: 0.1rem;
+  font-size: 1.3rem;
+}
+.not{
+  color: rgb(116, 95, 95);
+}
+.product-item-footer{
+  display: flex;
+  margin: 1rem 0rem;
+}
+.origins{
+  flex: 9;
+  margin: 0.2rem 0;
+  
+}
+.origins span{
+  background-color: bisque;  
+  margin: 0 0.1rem;
+  padding: 0.2rem;
+  border-radius: 0.1rem;
+  text-align: right;
+
+}
+.cook-time{
+  flex: 3;
+  padding: 0rem;
+
+}
