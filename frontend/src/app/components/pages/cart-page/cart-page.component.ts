@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { cartitem } from '../../partials/header/shared/models/Cartsitem';
+import { cartitem } from '../../shared/models/Cartsitem';
 import { CartService } from '../../../services/cart.service';
-import { cart } from '../../partials/header/shared/models/cart';
+import { cart } from '../../shared/models/cart';
 
 @Component({
   selector: 'app-cart-page',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Food } from '../../../components/partials/header/shared/models/food';
+import { Food } from '../../shared/models/food';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { FoodService } from '../../../services/food.service';
 import { CartService } from '../../../services/cart.service';
@@ -11,10 +11,17 @@ import { CartService } from '../../../services/cart.service';
 })
 export class FoodPageComponent {
   food!:Food;
-  constructor(activateRouter:ActivatedRoute,foodservice:FoodService,private cartService:CartService,private router:Router){
+  constructor(activateRouter:ActivatedRoute, foodservice:FoodService,private cartService:CartService,private router:Router){
     activateRouter.params.subscribe(param=>{
+      console.log('hello from food page');
+      
       if(param.id){
-        this.food=foodservice.getFoodById(param.id);
+        foodservice.getFoodById(param.id).subscribe(obs=>{
+          this.food=obs;
+          console.log(this.food.imageUrl);
+          
+          
+        });
       }
       
     })

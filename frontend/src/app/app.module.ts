@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
  import { FoodService } from './services/food.service';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/partials/header/header.component';
@@ -26,6 +26,7 @@ import { NotFoundComponent } from './components/partials/not-found/not-found.com
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
     // RatingModule
   ],
   providers: [
