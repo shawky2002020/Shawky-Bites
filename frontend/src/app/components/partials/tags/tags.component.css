@@ -13,7 +13,7 @@ div a {
   color: brown;
 }
 
-div a:focus {
+div .active {
   background-color: red;
   color: #f0f0f0;
 }
