@@ -13,7 +13,7 @@ export class LoginPageComponent implements OnInit{
   loginform!:FormGroup;
   isSubmitted:boolean=false;
   returnUrl!:string;
-  constructor(private formbuilder : FormBuilder,private loginservice:UserService,private activatedRoute:ActivatedRoute,
+  constructor(private formbuilder : FormBuilder,private Userservice:UserService,private activatedRoute:ActivatedRoute,
     private router:Router){
    
   }
@@ -32,7 +32,7 @@ export class LoginPageComponent implements OnInit{
     this.isSubmitted=true;
    
     if(this.loginform.invalid) return;
-    this.loginservice.login({email:this.fc.email.value,password:this.fc.password.value}).subscribe(()=>{
+    this.Userservice.login({email:this.fc.email.value,password:this.fc.password.value}).subscribe(()=>{
       this.router.navigateByUrl(this.returnUrl);
     });
   }

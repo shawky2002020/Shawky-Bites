@@ -9,6 +9,9 @@ html{
   font-size: 16px;
 }
 
+input{
+  background-color: transparent;
+}
 html,button{
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;

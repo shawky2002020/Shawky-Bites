@@ -15,8 +15,6 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { InputContainerComponent } from './components/partials/input-container/input-container.component';
-// import {T} from 'ngx-toastr'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +26,6 @@ import { InputContainerComponent } from './components/partials/input-container/i
     CartPageComponent,
     NotFoundComponent,
     LoginPageComponent,
-    InputContainerComponent,
   ],
   imports: [
     BrowserModule,
