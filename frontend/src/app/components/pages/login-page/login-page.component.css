@@ -1,0 +1,31 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 3rem;
+  }
+   h1{
+    color: white;
+  } 
+  
+  .details{
+    color: whitesmoke;
+    width: 28rem;
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .errors{
+    color: red;
+  }
+  
+  .register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

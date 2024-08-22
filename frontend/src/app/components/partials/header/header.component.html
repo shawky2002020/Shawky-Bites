@@ -1,17 +1,17 @@
 <header>
   <div class="container">
-    <a routerLink="/" class="logo">Shawky store</a>
+    <a routerLink="/" class="logo"></a>
     <nav>
-      <ul>
-        <li>
+      <ul class="navbar">
+        <li *ngIf="!user.token">
           <a routerLink="/login" >Login</a>
         </li>
         <li class="menu-container">
-          <a routerLink="/dashboard">Dashboard</a>
+          <a routerLink="/dashboard" *ngIf="user.token">{{user.name}}</a>
           <div class="menu">
             <a routerLink="/profile">Profile</a>
             <a routerLink="/orders">Orders</a>
-            <a>Logout</a> 
+            <a routerLink="" (click)="logout()">Logout</a> 
  
           </div>
         </li>

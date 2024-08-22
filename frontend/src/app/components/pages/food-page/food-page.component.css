@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Quicksand:wght@300..700&display=swap');
 
 .container{
   display: flex;
@@ -21,12 +22,14 @@ img{
 }
 
 .details{
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.112)1%,black 90%);
+  border-radius: 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   flex:1 0;
   padding: 2rem;
-  color: black;
+  /* color: rgba(245, 245, 245, 0.279); */
   margin-left: 1rem;
 }
 
@@ -36,8 +39,13 @@ img{
 }
 
 .name{
-  font-size: 2rem;
+  font-family: "Bungee Tint", sans-serif;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #3e3e3e3a;
   font-weight: bold;
+  font-size: xx-large;
+  font-style:normal;
 }
 
 .favorite{
@@ -50,6 +58,7 @@ img{
 }
 
 .origins{
+  color: whitesmoke;
   display: flex;
   flex-wrap: wrap;
   margin: 1rem 0;
@@ -60,7 +69,7 @@ img{
   font-size: 1.2rem;
   margin: 0.5rem 0.5rem 0.5rem 0;
   border-radius: 2rem;
-  background-color: aliceblue;
+  background-color: rgba(240, 248, 255, 0);
 }
 
 .tags{
@@ -69,12 +78,12 @@ img{
 }
 
 .tags a{
-  background-color: #f0f0f0;
+  background-color: #f0f0f02c;
   padding: 0.3rem 1rem;
   margin: 0.2rem 0.15rem;
   border-radius: 10rem;
   font-weight: 600;
-  color: blue;
+  color: #f0f0f0;
 }
 
 .cook-time{
@@ -85,6 +94,7 @@ img{
   padding: 0.6rem 2rem 0.6rem 0;
   border-radius: 10rem;
   font-size: 1.3rem;
+  color: wheat;
 }
 
 .price{
