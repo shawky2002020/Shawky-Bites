@@ -20,6 +20,7 @@ export class HeaderComponent {
       })
       userservice.userObservable.subscribe((newUser)=>{
         this.user=newUser;
+        
       })
     }
     logout(){

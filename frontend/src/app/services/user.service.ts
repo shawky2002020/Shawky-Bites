@@ -5,7 +5,6 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { User } from '../components/shared/user';
 import { IUserLogin } from '../interfaces/iuser-login';
 import { USER_LOGIN_URL } from '../components/shared/constants/urls';
-// import { IUserRegister } from '../shared/interfaces/IUserRegister';
 
 const USER_KEY = 'User';
 @Injectable({
@@ -68,6 +67,8 @@ export class UserService {
   }
 
   private setUserToLocalStorage(user:User){
+    console.log('from local',user);
+    
     localStorage.setItem(USER_KEY, JSON.stringify(user));
   }
 

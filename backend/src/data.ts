@@ -79,6 +79,7 @@ export const sample_tags:any[] = [
 ]
 export const sample_users: any[] = [
   {
+    id:'1',
     name: 'John Doe',
     email: 'john@gmail.com',
     password: '12345',
@@ -86,6 +87,7 @@ export const sample_users: any[] = [
     isAdmin: true,
   },
   {
+    id:'2',
     name: 'Jane Doe',
     email: 'Jane@gmail.com',
     password: 'janesteel10.',
@@ -93,6 +95,7 @@ export const sample_users: any[] = [
     isAdmin: false,
   },
   {
+    id:'3',
     name: 'Hanan maged',
     email: 'Hanan@gmail.com',
     password: 'hanansteel10.',
