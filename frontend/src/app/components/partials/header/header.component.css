@@ -25,7 +25,7 @@ a{
    width: 100%; 
 }
 .navbar li>a{
-  margin: 0 1rem;
+  margin: 0 0.1rem;
 }
 
 .navbar a:hover{
