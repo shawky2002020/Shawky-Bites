@@ -6,11 +6,12 @@ div{
 }
 
 input{
+  color: whitesmoke;
   border-radius: 10rem 0 0 10rem;
   border: none;
   height: 3rem;
   width: 20rem;
-  background-color: #f1f1f1;
+  background-color: #00000048;
   padding: 1.2rem;
   font-size: 1.1rem;
   font-weight: 500;
@@ -24,7 +25,7 @@ div button{
   font-size: 1rem;
   border-radius: 0 10rem 10rem 0;
   border: none;
-  background-color: #e72929;
+  background-color: #a00000;
   color: white;
   opacity: 0.8;
   /* outline: none; */

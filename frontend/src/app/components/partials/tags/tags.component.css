@@ -5,15 +5,29 @@ div {
 }
 
 div a {
-  background-color: #f0f0f0;
+  background-color: rgba(165, 42, 42, 0.123);
   padding: 0.3rem 1rem;
   margin: 0.2rem 0.15rem;
   border-radius: 10rem;
   font-weight: 600;
-  color: brown;
+  color: rgb(255, 255, 255);
+  transition: transform color background-color ;
 }
 
 div .active {
   background-color: red;
   color: #f0f0f0;
 }
+
+div a:hover {
+  background: #b40000;
+}
+ a:hover {
+  transform: scale(0.8);
+}
+div a{
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+

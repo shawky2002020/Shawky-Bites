@@ -11,7 +11,7 @@
       <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
     </div>
     <div>
-      <a routerLink="/food/{{cartItem.food.id}}">
+      <a routerLink="/food/{{cartItem.food.id}}" style="color: wheat;">
         {{cartItem.food.name}}
       </a>
     </div>
@@ -26,7 +26,7 @@
       <option>5</option>
     </select>
     </div>
-    <div>
+    <div class="cartItem-price">
       {{cartItem.price | currency}}
     </div>
 

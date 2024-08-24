@@ -11,8 +11,8 @@
           placeholder="Enter Your Mail">
         </div>
         <div class="errors" *ngIf="fc.email.errors && isSubmitted">
-          <div *ngIf="fc.email.errors.required">Email is required</div>
-          <div *ngIf="fc.email.errors.email">Email is incorrect</div>
+          <div *ngIf="fc.email.errors.required">* Email is required</div>
+          <div *ngIf="fc.email.errors.email">* Email is incorrect</div>
         </div>
         <label for="Password">Password</label>
         <div>
@@ -21,9 +21,9 @@
         </div>
 
         <div class="errors" *ngIf="fc.password.errors && isSubmitted">
-        <div *ngIf="fc.password.errors.required">Pass is required</div>
+        <div *ngIf="fc.password.errors.required">* Pass is required</div>
         <div *ngIf="fc.password.errors.pattern">
-          Password must be at least 8 characters long and include at least one letter, one number, and one special character
+          * Password must be at least 8 characters long and include at least one letter, one number, and one special character
         </div>
       </div>
       
@@ -32,6 +32,9 @@
         </div>
       </div>
     </form>
+    <div class="register">
+      <div>Don't have account ?</div>
+     <a routerLink="/register" [queryParams]="{returnUrl:returnUrl}">Register</a>
   </div>
   
 </div>

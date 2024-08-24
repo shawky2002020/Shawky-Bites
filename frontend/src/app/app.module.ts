@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
- import { FoodService } from './services/food.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/partials/header/header.component';
@@ -15,6 +14,13 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { RegisterComponent } from './components/pages/register/register.component';
+import { LoadingComponent } from './components/partials/loading/loading.component';
+import { LoadingService } from './services/loading.service';  // Import the LoadingService
+import { LoadingInterceptor } from './components/shared/interceptors/loading.interceptor';
+// import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
+import { OrdrItemsListComponent } from './components/partials/ordr-items-list/ordr-items-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +32,10 @@ import { ToastrModule } from 'ngx-toastr';
     CartPageComponent,
     NotFoundComponent,
     LoginPageComponent,
+    RegisterComponent,
+    LoadingComponent,
+    // CheckoutPageComponent,
+    OrdrItemsListComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,13 +44,14 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut:3000,
-      positionClass:'toast-bottom-right',
-      newestOnTop:false
-    })
-
+      timeOut: 3000,
+      positionClass: 'toast-bottom-right',
+      newestOnTop: false
+    }),
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },  // Register the interceptor here
+    LoadingService,  // Ensure the LoadingService is available
     provideClientHydration()
   ],
   bootstrap: [AppComponent]

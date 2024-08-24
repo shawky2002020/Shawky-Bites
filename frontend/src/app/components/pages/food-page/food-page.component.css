@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 3rem;
+  margin: 3rem 0 0 0;
 }
 
 .container > *{
@@ -17,20 +17,21 @@ img{
   border-radius: 3rem;
   flex: 1 0;
   object-fit: cover;
-  max-height: 35rem;
+  max-height: 25rem;
   margin: 1rem;
 }
 
 .details{
   background: linear-gradient(to top,rgba(0, 0, 0, 0.112)1%,black 90%);
   border-radius: 1rem;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   flex:1 0;
   padding: 2rem;
   /* color: rgba(245, 245, 245, 0.279); */
   margin-left: 1rem;
+  margin-bottom: 2rem;
 }
 
 .header{
@@ -98,7 +99,7 @@ img{
 }
 
 .price{
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 2rem 2rem 2rem 0;
   color: green;
 }

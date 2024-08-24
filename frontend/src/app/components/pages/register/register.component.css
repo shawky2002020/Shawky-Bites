@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  margin-top: 3rem;
+  /* height: 100%; */
+  /* margin: .5rem 0; */
 
   
   }
@@ -12,23 +12,24 @@
     text-align: center;
   } 
   input{
+    font-size: 16px;
+    display: block;
     padding: 0.6rem;
-    margin: 0.5rem 0.4rem;
+    margin: 0.7rem 0.4rem;
     color: white;
     background: transparent;
   }
   input::placeholder{
-    color: white;
+    color: rgba(255, 255, 255, 0.523);
   }
   .input-container{
     background: linear-gradient(to top,rgba(0, 0, 0, 0.112)1%,black 90%);
-    padding:2rem 2rem;
+    padding:3rem 2rem;
     border-radius: 2rem;
 
   }
   label{
     font-size: large;
-    font-weight: 600;
   }
 
   .details{
@@ -44,29 +45,15 @@
   
   .errors{
     color: rgb(255, 27, 27);
-    font-weight: 400;
+    font-weight: 500;
+    /* padding: 0.5rem 0.9rem; */
     margin: 0 1.3rem 1rem 1.3rem;
-
   }
   
   .register{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin: 1rem 0 3rem 0;
-    padding: 0.5rem 0 ;
-    border-radius: 1rem;
-    font-size: 20px;
-    background: #00000031;
-    
-
-  }
-  .register a{
-    color: rgb(255, 0, 0);
-    font-weight: 700;
-    text-decoration: underline;
-    margin-left: 0.5rem;
   }
   button{
     padding:1rem 1.5rem;
@@ -80,6 +67,26 @@
     cursor: pointer;
     transition: opacity transform;
   }
+
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 0 3rem 0;
+    padding: .8rem 0 ;
+    border-radius: 1rem;
+    font-size: 24px;
+    background: #00000031;
+    
+
+  }
+  .login a{
+    color: rgb(215, 0, 0);
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+  }
  
   button:hover{
     opacity: 1;
@@ -87,5 +94,5 @@
   }
   button{
     transition-timing-function: ease-in-out;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
   }

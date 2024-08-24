@@ -49,6 +49,8 @@ li select{
   width: 3rem;
   outline: none;
   border: none;
+  background-color: wheat;
+  color: black;
   border-bottom: 1px solid lightgrey;
   font-size: 1.1rem;
   font-weight: 100;
@@ -58,9 +60,13 @@ li .remove-button{
   border-radius: 1rem;
   border: none;
   padding: 0.5rem;
-  color: #e72929;
+  color: whitesmoke;
+  background-color: rgb(148, 0, 0);
   opacity: 0.7;
   outline: none;
+}
+.cartItem-price{
+  color: whitesmoke;
 }
 
 li .remove-button:hover{
@@ -104,6 +110,13 @@ li .remove-button:hover{
   content: 'Price: ';
   color: grey;
 }
+.total-price{
+  color: green;
+}
+.foods-count{
+  color: #e4e4e4;
+}
+
 
 .checkout a{
   padding: 1rem;

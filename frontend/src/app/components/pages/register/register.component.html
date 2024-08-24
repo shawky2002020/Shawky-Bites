@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="details">
+    <h1>Register</h1>
+    <div class="form-conatainer">
+      <form [formGroup]="RegisterForm" (ngSubmit)="submit()">
+       
+        <div class="input-container">
+          <label for="Name"
+            >Name
+            <input
+              type="text"
+              id="Name"
+              formControlName="name"
+              placeholder="Enter Your Name"
+            />
+          
+          </label>
+          <div class="errors" *ngIf="fc.name.errors && isSubmitted">
+            <div *ngIf="fc.name.errors.required">* Name is required</div>
+          </div>
+
+          <label for="Email"
+            >Email
+            <input
+              type="email"
+              id="Email"
+              placeholder="Enter Your Mail"
+              formControlName="email"
+            />
+          </label>
+          <div class="errors" *ngIf="fc.email.errors && isSubmitted">
+            <div *ngIf="fc.email.errors.email">* Email is incorrect</div>
+            <div *ngIf="fc.email.errors.required">* Email is required</div>
+          </div>
+
+          <label for="Password"
+            >Password
+            <input
+              type="password"
+              id="Password"
+              placeholder="Enter Your Pass"
+              formControlName="password"
+            />
+          </label>
+          <div class="errors" *ngIf="fc.password.errors && isSubmitted">
+            <div *ngIf="fc.password.errors.required">* Pass is required</div>
+            <div *ngIf="fc.password.errors.pattern">
+             * Password must be at least 8 characters long and include at least
+              one letter, one number, and one special character
+            </div>
+          </div>
+          <label for="Passconfirm"
+            >Confirm Password
+            <input
+              type="password"
+              id="Passconfirm"
+              placeholder="Rewrite your password"
+              formControlName="confirmPassword"
+            />
+
+            <div class="errors" *ngIf="fc.confirmPassword.errors && isSubmitted">
+              <div *ngIf="fc.confirmPassword.errors.required ">* Pass is required</div>
+              <div *ngIf="fc.confirmPassword.errors.notMatch && !fc.confirmPassword.errors.required ">
+                * Pass retype incorrect 
+              </div>
+            </div>
+          </label>
+          <label for="Address"
+            >Address
+            <input
+              type="text"
+              id="Address"
+              placeholder="Enter Your Mail"
+              formControlName="address"
+            />
+            <div class="errors" *ngIf="fc.address.errors && isSubmitted">
+              <div *ngIf="fc.address.errors.required">* Address is required</div>
+            </div>
+          </label>
+
+          <div class="btn">
+            <button type="submit">Register</button>
+          </div>
+          <h3 style="text-align: center; color: red; font-size: 24px">
+            * All fields are required
+          </h3>
+        </div>
+      </form>
+      <div class="login">
+        <div>Already User ?</div>
+       <a routerLink="/login" [queryParams]="{returnUrl:returnUrl}" >Login</a>
+    </div>
+  </div>
+</div>
