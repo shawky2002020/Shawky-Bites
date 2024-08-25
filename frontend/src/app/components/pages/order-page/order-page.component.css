@@ -5,6 +5,9 @@
   flex-wrap: wrap;
   color: whitesmoke;
 }
+h1{
+  color: rgba(197, 197, 197, 0.911);
+}
 
 .content{
   display: flex;
@@ -22,9 +25,11 @@
 .details > div{
   margin-top: 1rem;
   font-size: 1.1rem;
+  color: wheat;
 }
 
 .details strong{
+  color: whitesmoke;
   display: inline-block;
   width: 20%;
 }
