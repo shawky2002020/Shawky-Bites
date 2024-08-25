@@ -1,24 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Quicksand:wght@300..700&display=swap');
-
-ul {
+ul{
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items:center;
+  flex-wrap:wrap;
   list-style: none;
   padding: 0;
-  margin: 0;
 }
-
-.name {
+.name{
   font-family: "Bungee Tint", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-li a {
+li a{
   position: relative;
-  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.112) 1%, black 90%);
+  background: linear-gradient(-90deg,rgba(0, 0, 0, 0.112)1%,black 90%);
   height: 22.5rem;
   width: 20rem;
   border: 1px inset black;
@@ -29,101 +26,61 @@ li a {
   overflow: hidden;
   color: brown;
 }
-
-li a img {
+li a img{
   object-fit: cover;
   filter: grayscale(20%);
-  height: 14.5rem;
-  transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+  height:14.5rem ;
+  transition: filter transform;
 }
-
-li a img:hover {
+li a img:hover{
   filter: grayscale(0%);
   transform: scale(1.2);
 }
-
-.content {
+.content{
   margin-top: 0.3rem;
   padding: 0.5rem 0.2rem;
   position: relative;
   height: 7rem;
 }
-
-.favorite {
+.favorite{
   position: absolute;
   right: 0.5rem;
   top: 0.1rem;
   font-size: 1.3rem;
 }
-
-.not {
+.not{
   color: whitesmoke;
 }
-
-.product-item-footer {
+.product-item-footer{
   display: flex;
   margin: 1rem 0rem;
 }
-
-.origins {
+.origins{
   flex: 9;
   margin: 0.2rem 0;
+  
 }
-
-.origins span {
-  background-color: rgba(66, 66, 66, 0.205);
+.origins span{
+  background-color: rgba(66, 66, 66, 0.205);  
   color: rgb(133, 120, 120);
   margin: 0 0.1rem;
   padding: 0.1rem 0;
   border-radius: 0.1rem;
   text-align: right;
-}
 
-.cook-time {
+}
+.cook-time{
   flex: 3;
   padding: 0rem;
   color: rgb(225, 211, 211);
+
 }
 
-/* Media Queries for Responsiveness */
 
-/* Tablet view */
-@media (max-width: 768px) {
-  li a {
-    height: auto; /* Allow height to adjust automatically */
-    width: 100%; /* Make the card take full width */
-    max-width: 300px; /* Set a max-width to avoid excessively large cards */
-  }
 
-  .content {
-    height: auto; /* Allow content height to adjust automatically */
-  }
-}
 
-/* Mobile view */
-@media (max-width: 480px) {
-  li a {
-    height: auto; /* Allow height to adjust automatically */
-    width: 100%; /* Make the card take full width */
-    max-width: 250px; /* Further reduce max-width for very small screens */
-  }
-
-  .content {
-    height: auto; /* Allow content height to adjust automatically */
-    padding: 0.5rem 0.1rem; /* Reduce padding for smaller screens */
-  }
-
-  .favorite {
-    font-size: 1rem; /* Reduce font-size for smaller screens */
-  }
-
-  .product-item-footer {
-    flex-direction: column; /* Stack origins and cook-time vertically */
-    align-items: center; /* Center align the items */
-  }
-
-  .origins, .cook-time {
-    flex: none; /* Remove flex-grow/shrink */
-    margin: 0.2rem 0; /* Adjust margin */
-  }
+/* transition */
+li a img{
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }

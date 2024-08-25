@@ -7,11 +7,24 @@ import { CartService } from '../../../services/cart.service';
 import { UserService } from '../../../services/user.service';
 import { OrderService } from '../../../services/order.service';
 import { User } from '../../shared/user';
+import { trigger, style, animate, transition } from '@angular/animations';
+
 
 @Component({
   selector: 'app-checkout-page',
   templateUrl: './checkout-page.component.html',
-  styleUrls: ['./checkout-page.component.css']
+  styleUrls: ['./checkout-page.component.css'],
+  animations: [
+    trigger('fadeInSlideUp', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(30px)' }),
+        animate('600ms ease-out', style({ opacity: 1, transform: 'translateY(0)' })),
+      ]),
+      transition(':leave', [
+        animate('600ms ease-out', style({ opacity: 0, transform: 'translateY(30px)' })),
+      ]),
+    ]),
+  ],
 })
 export class CheckoutPageComponent implements OnInit {
   order:Order = new Order();

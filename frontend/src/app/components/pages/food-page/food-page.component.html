@@ -3,7 +3,7 @@
   notFoundMessage="Food Not Found"
   resetLinkText="Back To Homepage">
 </app-not-found>
-<div *ngIf="food" class="container">
+<div *ngIf="food" class="container" @zoomIn>
   <img [src]="food.imageUrl" [alt]="food.name"/>
 
   <div class="details">

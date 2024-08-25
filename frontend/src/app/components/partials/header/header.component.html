@@ -7,7 +7,7 @@
           <a routerLink="/login" >Login</a>
         </li>
         <li class="menu-container">
-          <a routerLink="/dashboard" *ngIf="user.token">{{user.name}}</a>
+          <a routerLink="/dashboard" *ngIf="user.token">{{user.name|uppercase}}</a>
           <div class="menu">
             <a routerLink="/profile">Profile</a>
             <a routerLink="" (click)="logout()">Logout</a> 

@@ -3,12 +3,22 @@ import { Form, FormBuilder, FormControl, FormGroup, Validators } from '@angular/
 import { UserService } from '../../../services/user.service';
 import { User } from '../../shared/user';
 import { ActivatedRoute, Router } from '@angular/router';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.css'
+  styleUrl: './login-page.component.css',
+  animations: [
+    trigger('slideInFromLeft', [
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('500ms ease-in-out', style({ transform: 'translateX(0)' })),
+      ]),
+    ]),
+  ],
 })
+
 export class LoginPageComponent implements OnInit{
   loginform!:FormGroup;
   isSubmitted:boolean=false;

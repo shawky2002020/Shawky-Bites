@@ -4,7 +4,7 @@
   notFoundMessage="Cart Page Is Empty!"
   resetLinkText="Go To Homepage"
 ></app-not-found>
-<div *ngIf="cart && cart.items.length" class="container">
+<div *ngIf="cart && cart.items.length" class="container" @bounceIn>
 <ul>
   <li *ngFor="let cartItem of cart.items">
     <div>

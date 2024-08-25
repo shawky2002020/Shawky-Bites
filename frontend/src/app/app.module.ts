@@ -26,7 +26,6 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
 import { PaypalComponent } from './components/partials/paypal/paypal.component';
 import { OrderPageComponent } from './components/pages/order-page/order-page.component';
 import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -54,7 +53,7 @@ import { ProfilePageComponent } from './components/pages/profile-page/profile-pa
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    // BrowserAnimationsModule,
+   BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-bottom-right', 

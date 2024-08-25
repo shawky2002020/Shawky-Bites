@@ -1,5 +1,8 @@
-<app-search></app-search>
-<app-tags></app-tags>
+<div @fadeIn>
+  <app-search></app-search>
+  <app-tags></app-tags>
+</div>
+
 <app-not-found
 [visible]="!foods || !foods.length"
 resetLinkText="Reset Search">
@@ -8,8 +11,10 @@ resetLinkText="Reset Search">
 <app-tags></app-tags> -->
 <ul> 
   <li *ngFor="let food of foods">
+
+   <div @flipIn>
     <a routerLink="/food/{{food.id}}">
-      <div style="overflow: hidden;">
+      <div style="overflow: hidden;" >
         <img [src]="food.imageUrl" [alt]="food.name" />
 
       </div>
@@ -43,5 +48,6 @@ resetLinkText="Reset Search">
         </div>
       </div>
     </a>
+   </div>
   </li>
 </ul>

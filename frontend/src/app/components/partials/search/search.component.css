@@ -16,6 +16,10 @@ input{
   font-size: 1.1rem;
   font-weight: 500;
   outline:none;
+  transition: transform;
+}
+input:hover  {
+  transform: scale(1.1);
 }
 
 div button{
@@ -34,4 +38,9 @@ div button{
 div button:hover{
   opacity: 1;
   cursor: pointer;
+}
+input,
+button{
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
 }

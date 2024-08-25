@@ -1,20 +1,30 @@
-.container{
+.container {
   margin-top: 1rem;
   display: flex;
   margin: 0 2rem 6rem 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   color: whitesmoke;
 }
+h2{
+  color: wheat;
+  text-align: center;
+}
 
-.content{
+.order-items{
+  justify-content: center;
+  align-items: center;
+}
+.content {
   width: 35rem;
   margin-right: 3rem;
   display: flex;
   flex-direction: column;
 }
 
-.summary > div{
+/* Summary section layout */
+.summary > div {
   display: flex;
   margin-top: 0.7rem;
 }
@@ -23,19 +33,70 @@
   font-size: 1.2rem;
 }
 
-.summary h3{
+.summary h3 {
   margin: 0 1rem 0 0;
   flex-basis: 5rem;
 }
 
-
-.buttons-container{
+/* Buttons section layout */
+.buttons-container {
   flex-basis: 100%;
   display: flex;
   justify-content: center;
 }
 
-.buttons{
+.buttons {
   margin: 2rem;
   width: 35rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .content {
+    width: 30rem;
+    margin-right: 2rem;
+  }
+
+  .buttons {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+
+  .summary span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 0 1rem 4rem 1rem;
+  }
+
+  .content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+
+  .summary h3 {
+    flex-basis: 4rem;
+    font-size: 1rem;
+  }
+
+  .summary span {
+    font-size: 0.9rem;
+  }
 }

@@ -1,52 +1,144 @@
-.container{
+.container {
   margin-top: 1rem;
   display: flex;
   margin: 0 2rem 6rem 2rem;
   flex-wrap: wrap;
   justify-content: center;
   color: whitesmoke;
+  
 }
-input{
+h2{
+  text-align: center;
+  color: wheat;
+}
+label{
+  display: block;
+  margin: 0.2rem 0;
+}
+.input-details{
+  display: block;
+  align-items: center;
+  margin: 0.6rem 0.4rem;
+}
+
+/* Adjust input styling for smaller screens */
+input {
+
+  padding: 0.4rem 0.3rem;
+  
   color: whitesmoke;
-}
-.content{
-  width: 35rem;
-  margin-right: 3rem;
-}
-
-.content,form{
-  display: flex;
-  flex-direction: column;
-}
-
-form{
   width: 100%;
 }
 
-.buttons-container{
+/* Make content responsive */
+.content {
+  width: 100%;
+  max-width: 35rem;
+  margin-right: 3rem;
+  overflow: hidden;
+}
+
+/* Flexbox layout for content and form */
+.content, form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Buttons container should also be responsive */
+.buttons-container {
   flex-basis: 100%;
   display: flex;
   justify-content: center;
 }
-
-.buttons{
+.map{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
   margin: 2rem;
-  width: 35rem;
+  overflow: hidden;
 }
 
-button{
-  color: rgb(99, 99, 99);
-  background-color: yellow;
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
   width: 100%;
+  max-width: 35rem;
+}
+
+/* Style the button */
+button {
+  color: rgb(83, 82, 82);
+  background-color: rgba(255, 255, 0, 0.68);
+  width: 100%;
+  max-width: 80%;
   height: 3rem;
   opacity: 0.8;
   font-size: 1.3rem;
   border: none;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 1px 2px wheat;
+  font-weight: 600;
 }
 
-button:hover{
+button:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    margin: 1rem;
+  }
+
+  .content {
+    margin-right: 1rem;
+  }
+
+  .buttons-container {
+    justify-content: center;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-right: 0;
+  }
+
+  .buttons {
+    margin: 1rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+    height: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 1rem 0;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+  }
+
+  .buttons {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
 }

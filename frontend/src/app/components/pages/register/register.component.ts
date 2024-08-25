@@ -4,12 +4,22 @@ import { UserService } from '../../../services/user.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { IUserRegister } from '../../../interfaces/iuser-register';
 import { PasswordsMatchValidator } from '../../../validators/password_match_validator';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('500ms', style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
+
 export class RegisterComponent implements OnInit {
   RegisterForm!: FormGroup;
   returnUrl!:string;

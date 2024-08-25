@@ -2,3 +2,6 @@
   background: #000;
   color: #000;
 }
+body{
+  overflow: hidden;
+}

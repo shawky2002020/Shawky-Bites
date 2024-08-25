@@ -3,11 +3,21 @@ import { Food } from '../../shared/models/food';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { FoodService } from '../../../services/food.service';
 import { CartService } from '../../../services/cart.service';
+import { trigger, style, animate, transition } from '@angular/animations';
+
 
 @Component({
   selector: 'app-food-page',
   templateUrl: './food-page.component.html',
-  styleUrl: './food-page.component.css'
+  styleUrl: './food-page.component.css',
+  animations: [
+    trigger('zoomIn', [
+      transition(':enter', [
+        style({ transform: 'scale(0.5)', opacity: 0 }),
+        animate('500ms ease-out', style({ transform: 'scale(1)', opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
 export class FoodPageComponent {
   food!:Food;
