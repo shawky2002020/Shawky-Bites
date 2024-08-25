@@ -7,6 +7,10 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { RegisterComponent } from './components/pages/register/register.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
+import { authGuard } from './auth/guards/auth.guard';
+import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { OrderPageComponent } from './components/pages/order-page/order-page.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -16,7 +20,10 @@ const routes: Routes = [
   {path:'cart-page',component:CartPageComponent},
   {path:'login',component:LoginPageComponent},
   {path:'register',component:RegisterComponent},
-  {path:'checkout',component:CheckoutPageComponent}
+  {path:'checkout',component:CheckoutPageComponent,canActivate:[authGuard]},
+  {path:'payment',component:PaymentPageComponent,canActivate:[authGuard]},
+  {path:'profile',component:ProfilePageComponent,canActivate:[authGuard]},
+  {path:'track/:orderId',component:OrderPageComponent,canActivate:[authGuard]}
 ];
 
 @NgModule({

@@ -4,13 +4,16 @@ table{
   margin-top: 1rem;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  color: whitesmoke;
+  color: rgb(202, 205, 174);
+  font-weight: 400;
+  font-size: large;
+  background: #000000af;
 }
 
 h3{
   margin-top: 0.5rem;
   margin-left: 0.3rem;
-  color: grey;
+  color: rgba(255, 255, 0, 0.587);
 }
 
 a:hover{

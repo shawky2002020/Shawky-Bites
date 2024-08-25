@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Profile</h1>
+  <div class="details">
+    <h2>Name</h2>
+    <span>{{ user.name | uppercase }}</span>
+
+    <h3>Email</h3>
+    <span> {{ user.email }}</span>
+    <h3>Address</h3>
+    <span> {{ user.address }}</span>
+    <h3>Order ID</h3>
+    <span>{{ order.id ||' No Orders ' }}</span>
+    <h3>Order Status</h3>
+    <span>{{ order.status || 'UnConfirmed' }}</span>
+  </div>
+</div>

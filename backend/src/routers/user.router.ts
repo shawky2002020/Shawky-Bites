@@ -13,9 +13,9 @@ router.post(
   "/login",
   asyncHandler(async (req, res) => {
     const { email, password } = req.body;
-    const user = await UserModel.findOne({ email, password });
+    const user = await UserModel.findOne({ email });
 
-    if (user) {
+    if (user && bcrypt.compareSync(password, user.password)) {
       res.send(GenerateTokenResponse(user));
       console.log(user.name);
     } else {
@@ -23,6 +23,7 @@ router.post(
     }
   })
 );
+
 
 //seed
 router.get(
@@ -66,6 +67,7 @@ router.post('/register',asyncHandler(
 const GenerateTokenResponse = (user: any) => {
   const token = jwt.sign(
     {
+      id: user._id,  // Using MongoDB's unique _id
       email: user.email,
       isAdmin: user.isAdmin,
     },
@@ -76,7 +78,7 @@ const GenerateTokenResponse = (user: any) => {
   );
 
   return {
-    id: user.id,
+    id: user._id,  // Use _id for consistent identification
     email: user.email,
     password: user.password,
     name: user.name,

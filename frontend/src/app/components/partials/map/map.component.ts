@@ -1,18 +1,15 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
-import { icon, LatLng, LatLngExpression, LatLngTuple, LeafletMouseEvent, Map, marker, Marker, tileLayer } from 'leaflet';
-import { Inject, PLATFORM_ID } from '@angular/core';
-
+import { AfterViewInit, Component, ElementRef, Inject, Input, OnChanges, PLATFORM_ID, SimpleChanges, ViewChild } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-
+import { icon, LatLng, LatLngExpression, LatLngTuple, LeafletMouseEvent, Map, marker, Marker, tileLayer } from 'leaflet';
 import { Order } from '../../shared/models/order';
 import { LocationService } from '../../../services/location.service';
 
 @Component({
-  selector: 'app-map',  // Ensure this selector is correct
+  selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
- export class MapComponent  {
+export class MapComponent implements OnChanges, AfterViewInit {
   @Input() order!: Order;
   @Input() readonly = false;
 
@@ -30,25 +27,23 @@ import { LocationService } from '../../../services/location.service';
   private map!: Map;
   private currentMarker!: Marker;
 
-  constructor(private locationService: LocationService,@Inject(PLATFORM_ID) private platformId: any) { }
+  constructor(private locationService: LocationService, @Inject(PLATFORM_ID) private platformId: any) { }
+
   ngAfterViewInit() {
-    if (typeof window !== 'undefined') {
+    if (isPlatformBrowser(this.platformId)) {
       this.initializeMap();
     }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['order']) {
-      if (typeof window !== 'undefined') {
-        this.initializeMap();
-      }
+    if (changes['order'] && isPlatformBrowser(this.platformId)) {
+      this.initializeMap();
     }
-  
+
     if (this.readonly && this.addressLatLng) {
       this.showLocationOnReadonlyMode();
     }
   }
-  
 
   showLocationOnReadonlyMode() {
     if (!this.map || !this.addressLatLng) return;
@@ -68,22 +63,19 @@ import { LocationService } from '../../../services/location.service';
   }
 
   initializeMap() {
-    if (typeof window !== 'undefined')
-    
     if (isPlatformBrowser(this.platformId)) {
       import('leaflet').then(leaflet => {
         this.map = leaflet.map(this.mapRef.nativeElement, {
           attributionControl: false
         }).setView(this.DEFAULT_LATLNG, 12);
-  
+
         leaflet.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(this.map);
       }).catch(error => {
         console.error('Error loading Leaflet:', error);
       });
     }
   }
-  
-  
+
   findMyLocation() {
     this.locationService.getCurrentLocation().subscribe({
       next: (latlng) => {
@@ -125,7 +117,3 @@ import { LocationService } from '../../../services/location.service';
     return this.order.addressLatLng!;
   }
 }
-
-
-
-

@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: rgba(253, 255, 230, 0.717);  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem; /* Add some padding to prevent content from touching the edges */
+}
+
+.details {
+  margin: 0;
+  flex: 1 0 100%; /* Allow it to take full width on smaller screens */
+  display: inline-block;
+  background: #00000094;
+  width: 90%; /* Adjust the width to be responsive */
+  max-width: 35rem; /* Limit the maximum width */
+  min-width: 15rem; /* Set a minimum width */
+  padding: 1rem;
+  border-radius: 2rem;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+span {
+  display: inline;
+  margin: 0.4rem 1rem;
+  color: wheat;
+}
+
+/* Media Query for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  .details {
+    width: 95%; /* Increase the width on smaller screens */
+    min-width: 12rem; /* Adjust the minimum width */
+  }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 480px) {
+  .details {
+    width: 100%; /* Make details take full width */
+    min-width: 100%; /* Ensure it doesn’t shrink too much */
+    padding: 0.5rem; /* Reduce padding for smaller screens */
+  }
+
+  span {
+    margin: 0.2rem 0.5rem; /* Adjust margins for smaller screens */
+    font-size: 0.9rem; /* Reduce font size */
+  }
+}

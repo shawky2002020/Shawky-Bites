@@ -6,6 +6,7 @@ import { Order } from '../../shared/models/order';
 import { CartService } from '../../../services/cart.service';
 import { UserService } from '../../../services/user.service';
 import { OrderService } from '../../../services/order.service';
+import { User } from '../../shared/user';
 
 @Component({
   selector: 'app-checkout-page',
@@ -15,6 +16,8 @@ import { OrderService } from '../../../services/order.service';
 export class CheckoutPageComponent implements OnInit {
   order:Order = new Order();
   checkoutForm!: FormGroup;
+  user!:User;
+  
   constructor(cartService:CartService,
               private formBuilder: FormBuilder,
               private userService: UserService,
@@ -28,6 +31,7 @@ export class CheckoutPageComponent implements OnInit {
 
   ngOnInit(): void {
     let {name, address} = this.userService.currentUser;
+    
     this.checkoutForm = this.formBuilder.group({
       name:[name, Validators.required],
       address:[address, Validators.required]
@@ -44,11 +48,11 @@ export class CheckoutPageComponent implements OnInit {
       return;
     }
 
-    // if(!this.order.addressLatLng){
-    //   this.toastrService.warning('Please select your location on the map', 'Location');
-    //   return;
-    // }
-
+    if(!this.order.addressLatLng){
+      this.toastrService.warning('Please select your location on the map', 'Location');
+      return;
+    }
+    
     this.order.name = this.fc.name.value;
     this.order.address = this.fc.address.value;
 

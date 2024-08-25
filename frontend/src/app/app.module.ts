@@ -21,6 +21,11 @@ import { OrdrItemsListComponent } from './components/partials/ordr-items-list/or
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { MapComponent } from './components/partials/map/map.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthInterceptor } from './auth/auth.interceptor';
+import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { PaypalComponent } from './components/partials/paypal/paypal.component';
+import { OrderPageComponent } from './components/pages/order-page/order-page.component';
+import { ProfilePageComponent } from './components/pages/profile-page/profile-page.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -39,6 +44,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CheckoutPageComponent,
     OrdrItemsListComponent,
     MapComponent,
+    PaymentPageComponent,
+    PaypalComponent,
+    OrderPageComponent,
+    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,12 +57,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     // BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 3000,
-      positionClass: 'toast-bottom-right',
+      positionClass: 'toast-bottom-right', 
       newestOnTop: false
     }),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },  // Register the interceptor here
+    { provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true },  
     LoadingService,  // Ensure the LoadingService is available
     provideClientHydration()
   ],
