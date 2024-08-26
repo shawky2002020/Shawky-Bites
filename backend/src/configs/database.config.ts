@@ -1,6 +1,6 @@
 import { connect,ConnectOptions } from "mongoose";
 export const dbConnect =()=>{
-  connect('mongodb://localhost:27017/Foodmine',{
+  connect(process.env.MONGO_URL!,{
     useNewUrlParser:true,
     useUnifiedTopology:true
   }as ConnectOptions).then(

@@ -1,12 +1,13 @@
 import express from 'express'
 import { dbConnect } from './configs/database.config';
 import cors from 'cors'
+import dotenv from 'dotenv'
 import foodRouter from './routers/food.router'
 import userRouter from './routers/user.router';
 import orderRouter from './routers/order.router';
 import path from 'path';
 
-
+dotenv.config();
 
 dbConnect();
 

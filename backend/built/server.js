@@ -20,9 +20,10 @@ app.use((0, cors_1.default)({
 app.use("/api/foods", food_router_1.default);
 app.use("/api/users", user_router_1.default);
 app.use("/api/orders", order_router_1.default);
-app.use(express_1.default.static('public'));
+app.use(express_1.default.static(path_1.default.join(__dirname, '..', '..', 'frontend', 'dist', 'frontend', 'browser')));
+// Send all requests to index.html
 app.get('*', function (req, res) {
-    res.sendFile(path_1.default.join(__dirname, '..', 'frontend', 'dist', 'frontend', 'browser', 'index.html'));
+    res.sendFile(path_1.default.join(__dirname, '..', '..', 'frontend', 'dist', 'frontend', 'browser', 'index.html'));
 });
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
