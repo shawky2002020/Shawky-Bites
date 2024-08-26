@@ -15,7 +15,7 @@ ul{
 
 li a{
   position: relative;
-  background: rgba(0, 0, 0, 0.927);
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.112) 1%, black 90%);
   height: 22.5rem;
   width: 20rem;
   border: 1px inset black;
