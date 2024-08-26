@@ -6,7 +6,7 @@ Shawky Bites is a MEAN stack food store application that provides a complete sol
 
 - **CRUD Operations:** Create, Read, Update, and Delete food items.
 - **Router Guards:** Protect routes and manage access control.
-- **Maps:** Display food store locations using maps.
+- **Maps:** Select your location using maps.
 - **Payments:** Integrated payment options including Credit Card and PayPal.
 
 ## Getting Started
