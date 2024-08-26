@@ -23,7 +23,7 @@
     color: rgba(255, 255, 255, 0.523);
   }
   .input-container{
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.112) 1%, black 90%);
+    background: rgba(0, 0, 0, 0.811);
     padding:3rem 2rem;
     border-radius: 2rem;
 
@@ -58,9 +58,9 @@
   button{
     padding:1rem 1.5rem;
     border-style: none;
-    background: #000000;
+    background: whitesmoke;
     opacity: 0.8;
-    color: whitesmoke;
+    color: black;
     border-radius: 1rem;
     font-size: large;
     margin: 1rem 0.7rem;
