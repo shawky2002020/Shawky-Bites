@@ -128,6 +128,7 @@ li .remove-button:hover{
   border-radius: 1rem;
   text-align: center;
   opacity: 0.7;
+  margin-top: 0.7rem;
   justify-self: center;
 }
 

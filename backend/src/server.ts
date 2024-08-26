@@ -1,9 +1,9 @@
 import express from 'express'
-import { dbConnect } from './src/configs/database.config';
+import { dbConnect } from './configs/database.config';
 import cors from 'cors'
-import foodRouter from './src/routers/food.router'
-import userRouter from './src/routers/user.router';
-import orderRouter from './src/routers/order.router';
+import foodRouter from './routers/food.router'
+import userRouter from './routers/user.router';
+import orderRouter from './routers/order.router';
 import path from 'path';
 
 
@@ -23,8 +23,9 @@ app.use("/api/users", userRouter);
 app.use("/api/orders", orderRouter);
 
 app.use(express.static('public'));
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname,'public', 'index.html'))
+
+app.get('/',(req,res)=>{
+  res.send('working');
 })
 
 const port =process.env.PORT ||5000;
