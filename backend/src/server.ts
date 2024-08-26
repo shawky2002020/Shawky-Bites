@@ -22,11 +22,12 @@ app.use("/api/foods", foodRouter);
 app.use("/api/users", userRouter);
 app.use("/api/orders", orderRouter);
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '..', 'frontend', 'dist', 'frontend')));
 
+// Send all requests to index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'frontend', 'dist','frontend','browser', 'index.html'));
-})
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'dist', 'frontend', 'index.html'));
+});
 
 const port =process.env.PORT ||5000;
 app.listen(port,()=>{
