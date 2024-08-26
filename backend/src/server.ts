@@ -22,7 +22,7 @@ app.use("/api/foods", foodRouter);
 app.use("/api/users", userRouter);
 app.use("/api/orders", orderRouter);
 
-app.use(express.static(path.join(__dirname,'..', '..', 'frontend', 'dist','browser','frontend')));
+app.use(express.static(path.join(__dirname,'..', '..', 'frontend', 'dist','browser')));
 
 // Send all requests to index.html
 app.get('*', (req, res) => {
