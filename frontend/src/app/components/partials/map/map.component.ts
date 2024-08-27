@@ -65,17 +65,14 @@ export class MapComponent implements OnChanges, AfterViewInit {
 
   initializeMap() {
     if (isPlatformBrowser(this.platformId)) {
-      import('leaflet').then(leaflet => {
-        this.map = leaflet.map(this.mapRef.nativeElement, {
-          attributionControl: false
-        }).setView(this.DEFAULT_LATLNG, 12);
-
-        leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
-      }).catch(error => {
-        console.error('Error loading Leaflet:', error);
-      });
+      this.map = L.map(this.mapRef.nativeElement, {
+        attributionControl: false
+      }).setView(this.DEFAULT_LATLNG, 12);
+  
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
     }
   }
+  
 
   findMyLocation() {
     this.locationService.getCurrentLocation().subscribe({
