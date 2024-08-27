@@ -1,5 +1,3 @@
-![home page](https://github.com/user-attachments/assets/6c669777-2831-4ce5-91fc-93d75d06ee3a)# Shawky Bites
-
 ![Shawky Bites Screenshot](https://github.com/user-attachments/assets/aaf38691-4e5d-4bce-a8ea-710cdbe5ba4b)
 
 **Shawky Bites** is a powerful MEAN stack food store application designed to simplify the management of food orders for businesses of any size. This application provides a seamless experience for both administrators and customers, offering intuitive interfaces for CRUD operations, secure route management, interactive maps for location selection, and integrated payment options.
