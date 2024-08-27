@@ -69,7 +69,7 @@ export class MapComponent implements OnChanges, AfterViewInit {
           attributionControl: false
         }).setView(this.DEFAULT_LATLNG, 12);
 
-        leaflet.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(this.map);
+        leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
       }).catch(error => {
         console.error('Error loading Leaflet:', error);
       });
