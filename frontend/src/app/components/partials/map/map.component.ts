@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Inject, Input, OnChanges, PLATFORM_ID, SimpleChanges, ViewChild } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { icon, LatLng, LatLngExpression, LatLngTuple, LeafletMouseEvent, Map, marker, Marker, tileLayer } from 'leaflet';
+import * as L from 'leaflet';
+
 import { Order } from '../../shared/models/order';
 import { LocationService } from '../../../services/location.service';
 
@@ -14,18 +15,18 @@ export class MapComponent implements OnChanges, AfterViewInit {
   @Input() readonly = false;
 
   private readonly MARKER_ZOOM_LEVEL = 16;
-  private readonly MARKER_ICON = icon({
+  private readonly MARKER_ICON = L.icon({
     iconUrl: 'https://res.cloudinary.com/foodmine/image/upload/v1638842791/map/marker_kbua9q.png',
     iconSize: [42, 42],
     iconAnchor: [21, 42],
   });
 
-  private readonly DEFAULT_LATLNG: LatLngTuple = [13.75, 21.62];
+  private readonly DEFAULT_LATLNG: L.LatLngTuple = [13.75, 21.62];
 
   @ViewChild('map', { static: true }) mapRef!: ElementRef;
 
-  private map!: Map;
-  private currentMarker!: Marker;
+  private map!: L.Map;
+  private currentMarker!: L.Marker;
 
   constructor(private locationService: LocationService, @Inject(PLATFORM_ID) private platformId: any) { }
 
@@ -85,8 +86,8 @@ export class MapComponent implements OnChanges, AfterViewInit {
     });
   }
 
-  setMarker(latlng: LatLngExpression) {
-    this.addressLatLng = latlng as LatLng;
+  setMarker(latlng: L.LatLngExpression) {
+    this.addressLatLng = latlng as L.LatLng;
     if (this.currentMarker) {
       this.currentMarker.setLatLng(latlng);
       return;
@@ -104,7 +105,7 @@ export class MapComponent implements OnChanges, AfterViewInit {
     });
   }
 
-  set addressLatLng(latlng: LatLng) {
+  set addressLatLng(latlng: L.LatLng) {
     if (!latlng.lat.toFixed) return;
 
     latlng.lat = parseFloat(latlng.lat.toFixed(8));
