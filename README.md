@@ -93,7 +93,6 @@ Here are some screenshots of Shawky Bites in action:
 ## Contributing
 
 We welcome contributions from the community! If you'd like to contribute, please follow these steps:
-![home page](https://github.com/user-attachments/assets/32257f61-765a-4a7d-913e-7524b7a3a3a5)
 
 1. **Fork the repository** on GitHub.
 2. **Create a new branch** (`git checkout -b feature-branch`).
