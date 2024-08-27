@@ -9,21 +9,30 @@ export class LocationService {
 
   constructor() { }
 
-  getCurrentLocation(): Observable<LatLngLiteral>{
+  getCurrentLocation(): Observable<{ lat: number, lng: number }> {
     return new Observable((observer) => {
-      if(!navigator.geolocation) return;
+      if (!navigator.geolocation) {
+        observer.error('Geolocation is not supported by this browser.');
+        return;
+      }
 
-      return navigator.geolocation.getCurrentPosition(
+      navigator.geolocation.getCurrentPosition(
         (pos) => {
           observer.next({
             lat: pos.coords.latitude,
             lng: pos.coords.longitude
-          })
+          });
+          observer.complete();
         },
         (error) => {
           observer.error(error);
+        },
+        {
+          enableHighAccuracy: true, // Request high accuracy
+          timeout: 10000, // Timeout in milliseconds
+          maximumAge: 0 // Disable cache
         }
-      )
-    })
+      );
+    });
   }
 }

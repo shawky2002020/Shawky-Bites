@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Inject, Input, OnChanges, PLATFORM_ID, SimpleChanges, ViewChild } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import * as L from 'leaflet';
-
+import * as L from 'leaflet'; // Static import of Leaflet
 import { Order } from '../../shared/models/order';
 import { LocationService } from '../../../services/location.service';
 
@@ -68,11 +67,10 @@ export class MapComponent implements OnChanges, AfterViewInit {
       this.map = L.map(this.mapRef.nativeElement, {
         attributionControl: false
       }).setView(this.DEFAULT_LATLNG, 12);
-  
+
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
     }
   }
-  
 
   findMyLocation() {
     this.locationService.getCurrentLocation().subscribe({
@@ -90,23 +88,21 @@ export class MapComponent implements OnChanges, AfterViewInit {
       return;
     }
 
-    import('leaflet').then(({ marker, icon }) => {
-      this.currentMarker = marker(latlng, {
-        draggable: true,
-        icon: this.MARKER_ICON
-      }).addTo(this.map);
+    this.currentMarker = L.marker(latlng, {
+      draggable: true,
+      icon: this.MARKER_ICON
+    }).addTo(this.map);
 
-      this.currentMarker.on('dragend', () => {
-        this.addressLatLng = this.currentMarker.getLatLng();
-      });
+    this.currentMarker.on('dragend', () => {
+      this.addressLatLng = this.currentMarker.getLatLng();
     });
   }
 
   set addressLatLng(latlng: L.LatLng) {
     if (!latlng.lat.toFixed) return;
 
-    latlng.lat = parseFloat(latlng.lat.toFixed(8));
-    latlng.lng = parseFloat(latlng.lng.toFixed(8));
+    latlng.lat = parseFloat(latlng.lat.toFixed(15));
+    latlng.lng = parseFloat(latlng.lng.toFixed(15));
     this.order.addressLatLng = latlng;
     console.log(this.order.addressLatLng);
   }
