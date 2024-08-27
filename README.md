@@ -1,4 +1,4 @@
-# Shawky Bites
+![home page](https://github.com/user-attachments/assets/6c669777-2831-4ce5-91fc-93d75d06ee3a)# Shawky Bites
 
 ![Shawky Bites Screenshot](https://github.com/user-attachments/assets/aaf38691-4e5d-4bce-a8ea-710cdbe5ba4b)
 
@@ -82,19 +82,20 @@ Ensure you have the following installed on your machine:
 
 Here are some screenshots of Shawky Bites in action:
 
-<div style="display: flex; overflow-x: auto; padding: 10px 0;">
-    <img src="https://github.com/user-attachments/assets/5776f23d-ff4c-4ae8-98dd-32d6f74105cf" alt="Payment Page" style="width: 300px; margin-right: 10px;" />
-    <img src="https://github.com/user-attachments/assets/93230f4b-b27d-4912-8263-9b8a43100617" alt="Track Page" style="width: 300px; margin-right: 10px;" />
-    <img src="https://github.com/user-attachments/assets/home-page.png" alt="Home Page" style="width: 300px; margin-right: 10px;" />
-    <img src="https://github.com/user-attachments/assets/b5cd820c-9b53-4975-bb93-55ed1eacee8b" alt="Login Page" style="width: 300px; margin-right: 10px;" />
+<div style="display: flex; overflow-x: auto; width: 100%; padding: 10px 0;">
+    <img src="https://github.com/user-attachments/assets/32257f61-765a-4a7d-913e-7524b7a3a3a5" alt="Home Page" style="width: 300px; margin-right: 10px;" />
     <img src="https://github.com/user-attachments/assets/9db14f90-b90d-44f5-9dd2-7df4ae973120" alt="Food Page" style="width: 300px; margin-right: 10px;" />
+    <img src="https://github.com/user-attachments/assets/b5cd820c-9b53-4975-bb93-55ed1eacee8b" alt="Login Page" style="width: 300px; margin-right: 10px;" />
     <img src="https://github.com/user-attachments/assets/dbcf5c3e-28a8-4310-a2f1-fb6d02e2a6f6" alt="Cart Page" style="width: 300px; margin-right: 10px;" />
     <img src="https://github.com/user-attachments/assets/f5cc8c88-58d6-4806-bc4e-8e3cd4d073b0" alt="Checkout Page" style="width: 300px;" />
+    <img src="https://github.com/user-attachments/assets/5776f23d-ff4c-4ae8-98dd-32d6f74105cf" alt="Payment Page" style="width: 300px; margin-right: 10px;" />
+    <img src="https://github.com/user-attachments/assets/93230f4b-b27d-4912-8263-9b8a43100617" alt="Track Page" style="width: 300px; margin-right: 10px;" />
 </div>
 
 ## Contributing
 
 We welcome contributions from the community! If you'd like to contribute, please follow these steps:
+![home page](https://github.com/user-attachments/assets/32257f61-765a-4a7d-913e-7524b7a3a3a5)
 
 1. **Fork the repository** on GitHub.
 2. **Create a new branch** (`git checkout -b feature-branch`).
@@ -110,4 +111,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any inquiries, issues, or suggestions, feel free to contact [Your Name] at [Your Email].
+For any inquiries, issues, or suggestions, feel free to contact Shawky Elsayed at Shawkyelsayyed2002@gmail.com
