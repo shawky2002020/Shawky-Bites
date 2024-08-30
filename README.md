@@ -108,4 +108,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any inquiries, issues, or suggestions, feel free to contact Shawky Elsayed at Shawkyelsayyed2002@gmail.com
+For any inquiries, issues, or suggestions, feel free to contact Shawky Elsayed at Shawkyelsayed2002@gmail.com
