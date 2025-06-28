@@ -13,6 +13,7 @@
   } 
   input{
     padding: 0.6rem;
+    width: 100%;
     margin: 0.5rem 0.4rem;
     color: white;
     background: transparent;
@@ -74,10 +75,12 @@
     opacity: 1;
   }
   button{
-    padding:1rem 1.5rem;
+    padding:0 1.5rem;
     border-style: none;
     background: #000000;
     opacity: 0.8;
+    height: 50px;
+    width: 100%;
     color: whitesmoke;
     border-radius: 1rem;
     font-size: large;
@@ -88,7 +91,6 @@
  
   button:hover{
     opacity: 1;
-    transform: scale(1.1);
   }
   .register a,
   button{

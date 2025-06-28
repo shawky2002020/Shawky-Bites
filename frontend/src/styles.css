@@ -24,24 +24,21 @@ body{
   position: relative;
   z-index: 0;
 }
-body::before {
+.back {
   display: flex;
-  content: '';
-  background-image: url(assets/pexels-patricio-ledeill-2922591-19036022.jpg);
-  background-size: cover;
-  background-repeat:repeat;
-  background-position: center;
+  position: fixed;
   filter: grayscale(40%);
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  object-fit: cover;
+  object-position:  center;
+  height: 100vh;
   z-index: -1;
   transition: filter 0.5s ease-in-out;
 }
 
-body:hover::before {
+.back:hover {
   filter: grayscale(0%);
 }
 a{

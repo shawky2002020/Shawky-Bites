@@ -10,7 +10,7 @@ export default (req: any, res: any, next: any) => {
     
 
     try {
-        const decodedUser = verify(token, "SomeRandomText");
+        const decodedUser =  verify(token, "SomeRandomText");
         req.user = decodedUser;
 
     } catch (error:any) {
